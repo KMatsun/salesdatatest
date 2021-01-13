@@ -1,16 +1,26 @@
 import streamlit as st
 import pandas as pd
-
+import matplotlib as mt
 st.title("てすとぺ一じ")
 st.write("サンプルデータ")
 
-df = pd.DataFrame({
-  '1列':[11, 4562, 563, 4324, 5],
-  '2列':[1, 2, 3, 4, 5]
-})
+df=pd.read_csv('/data/data/com.termux/files/home/salesdata/sample.csv',index_col=0)
+
 
 st.write(df)
-st.write("wifiの時だけ成功？")
-st.write("Network URL: http://10.114.152.116:8501  External URL: http://103.5.140.148:8501")
-st.write("公開されるuRlは変わるのか?!")
+st.line_chart(df)
 
+import matplotlib.pyplot as plt
+fig, ax1 = plt.subplots(1,1,figsize=(10,8))
+ax2 = ax1.twinx()
+ax1.bar(df.index,df['予算'],color='lightblue',label='予算')
+ax2.plot(df['実績'],linestyle='solid',color='k',marker='^',label='実績')
+ax1.set_ylim(0,2000)
+ax2.set_ylim(0,2000)
+handler1, label1 = ax1.get_legend_handles_labels()
+handler2, label2 = ax2.get_legend_handles_labels()
+ax1.legend(handler1+handler2,label1+label2,borderaxespad=0)
+ax1.grid(True)
+fig.show()
+
+st.write(fig)
