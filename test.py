@@ -4,7 +4,7 @@ import matplotlib as mt
 st.title("てすとぺ一じ")
 st.write("サンプルデータ")
 
-df=pd.read_csv(https://github.com/KMatsun/salesdatatest/sample.csv',index_col=0)
+df=pd.read_csv('https://github.com/KMatsun/salesdatatest/sample.csv',index_col=0)
 
 
 st.write(df)
