@@ -5,7 +5,7 @@ import pandas as pd
 st.title("てすとぺ一じ")
 st.write("サンプルデータ")
 
-url="https://drive.google.com/file/d/1PgxzIlQpnFbi5jAPLpoNwzSeMap-pJBT/view?usp=drivesdk"
+url="https://drive.google.com/file/d/1PgxzIlQpnFbi5jAPLpoNwzSeMap-pJBT/uc?usp=drivesdk"
 df=pd.read_csv(url,index_col=0)
 
 
