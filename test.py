@@ -4,7 +4,8 @@ import pandas as pd
 
 st.title("てすとぺ一じ")
 st.write("サンプルデータ")
-|
+
+
 url="https://drive.google.com/uc?id=1PgxzIlQpnFbi5jAPLpoNwzSeMap-pJBT"
 df=pd.read_csv(url,index_col=0)
 
