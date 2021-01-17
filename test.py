@@ -1,10 +1,12 @@
 import streamlit as st
 import pandas as pd
-import matplotlib as mt
+
+
 st.title("てすとぺ一じ")
 st.write("サンプルデータ")
 
-df=pd.read_csv('https://drive.google.com/file/d/1PgxzIlQpnFbi5jAPLpoNwzSeMap-pJBT/view?usp=drivesdk',index_col=0)
+url="https://drive.google.com/file/d/1PgxzIlQpnFbi5jAPLpoNwzSeMap-pJBT/view?usp=drivesdk"
+df=pd.read_csv(url,index_col=0)
 
 
 st.write(df)
