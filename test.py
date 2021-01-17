@@ -4,7 +4,7 @@ import matplotlib as mt
 st.title("てすとぺ一じ")
 st.write("サンプルデータ")
 
-df=pd.read_csv('sample.csv',index_col=0)
+df=pd.read_csv('https://drive.google.com/file/d/1PgxzIlQpnFbi5jAPLpoNwzSeMap-pJBT/view?usp=drivesdk',index_col=0)
 
 
 st.write(df)
