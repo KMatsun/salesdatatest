@@ -6,7 +6,7 @@ st.title("てすとぺ一じ")
 st.write("サンプルデータ")
 
 
-url="https://drive.google.com/uc?id=1PgxzIlQpnFbi5jAPLpoNwzSeMap-pJBT"
+url="https://drive.google.com/uc?id=1PxLne38t17SU8zxtm9MOBOQb0wVieTG9"
 df=pd.read_csv(url,index_col=0)
 
 
