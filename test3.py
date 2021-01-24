@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 
 
-st.title("てすとぺ一じ")
-st.write("サンプルデータ")
+st.title("てすとぺ������")
+st.write("サンプル�����タ")
 
 
 url="https://drive.google.com/uc?id=11CUOWKfXvZDDGmgbkg4Ht5Kwxgk-mVh3"
@@ -11,7 +11,7 @@ df=pd.read_csv(url,index_col=0)
 
 
 window = 7
-df["Srma"] = df["sales results"].rolling(window).mean()
+df["Srma"] = df["ales results"].rolling(window).mean()
 df["Lyma"] = df["Last year"].rolling(window).mean()
 
 
