@@ -11,7 +11,7 @@ df=pd.read_csv(url,index_col=0)
 
 
 window = 7
-df["Srma"] = df["ales results"].rolling(window).mean()
+df["Srma"] = df["Sales results"].rolling(window).mean()
 df["Lyma"] = df["Last year"].rolling(window).mean()
 
 
