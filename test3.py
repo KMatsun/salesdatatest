@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 
 
-st.title("ã¦ã™ã¨ãºä¸üüãüü")
-st.write("ã‚µãƒ³ãƒ—ãƒ«ãƒüüüüã‚¿")
+st.title("Sample")
+st.write("Sales")
 
 
 url="https://drive.google.com/uc?id=11CUOWKfXvZDDGmgbkg4Ht5Kwxgk-mVh3"
