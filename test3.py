@@ -9,6 +9,9 @@ st.write("Sales")
 url="https://drive.google.com/uc?id=11CUOWKfXvZDDGmgbkg4Ht5Kwxgk-mVh3"
 df=pd.read_csv(url,index_col=0)
 
+df["Sr_ruikei"]=df["Sales results"].cumsum()
+st.line_chart(df["Sr_ruikei"])
+
 
 window = 7
 df["Srma"] = df["Sales results"].rolling(window).mean()
