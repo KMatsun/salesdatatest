@@ -7,15 +7,16 @@ st.write("Sales")
 
 
 url="https://drive.google.com/uc?id=11CUOWKfXvZDDGmgbkg4Ht5Kwxgk-mVh3"
+
 df=pd.read_csv(url,index_col=0)
 
-df["Sr_ruikei"]=df["Sales results"].cumsum()
-st.line_chart(df["Sr_ruikei"])
+df["SRcum"]=df["result"].cumsum()
+st.line_chart(df["SRcum"])
 
 
 window = 7
-df["Srma"] = df["Sales results"].rolling(window).mean()
-df["Lyma"] = df["Last year"].rolling(window).mean()
+df["SRma"] = df["result"].rolling(window).mean()
+df["PYma"] = df["PY"].rolling(window).mean()
 
 
 st.write(df)
@@ -27,20 +28,20 @@ ax2 = ax1.twinx()
 ax3 = ax2.twinx()
 ax4= ax3.twinx()
 
-ax1.bar(df.index,df['Sales budget'],color='lightblue',label='Sales budget')
+ax1.bar(df.index,df['target'],color='lightblue',label='target')
 
-ax2.plot(df['Sales results'],linestyle='solid',color='k',marker='^',label='Sales results')
+ax2.plot(df['result'],linestyle='solid',color='k',marker='^',label='result')
 
-ax3.plot(df['Srma'],linestyle='solid',color='b',marker='^',label='Srma')
+ax3.plot(df['SRma'],linestyle='solid',color='b',marker='^',label='SRma')
 
-ax4.plot(df['Lyma'],linestyle='solid',color='m',marker='^',label='Lyma')
+ax4.plot(df['PYma'],linestyle='solid',color='m',marker='^',label='PYma')
 
 
 
-ax1.set_ylim(0,2000)
-ax2.set_ylim(0,2000)
-ax3.set_ylim(0,2000)
-ax4.set_ylim(0,2000)
+ax1.set_ylim(700,2000)
+ax2.set_ylim(700,2000)
+ax3.set_ylim(700,2000)
+ax4.set_ylim(700,2000)
 
 
 handler1, label1 = ax1.get_legend_handles_labels()
