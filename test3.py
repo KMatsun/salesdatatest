@@ -11,7 +11,7 @@ url="https://drive.google.com/uc?id=11CUOWKfXvZDDGmgbkg4Ht5Kwxgk-mVh3"
 
 df=pd.read_csv(url,index_col=0)
 
-pd.to_datetime(df['date'])
+df(['date'])=pd.to_datetime(df['date'])
 
 df["SRcum"]=df["result"].cumsum()
 st.line_chart(df["SRcum"])
