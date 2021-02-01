@@ -13,13 +13,12 @@ df=pd.read_csv(url,index_col=0,parse_dates=[0])
 
 
 
+
 df["SRcum"]=df["result"].cumsum()
 df["targetcum"]=df["target"].cumsum()
 df["PYcum"]=df["PY"].cumsum()
 
-st.line_chart(df.loc[:,['date','SRcum','targetcum','PYcum']])
-
-
+st.line_chart(df.loc['date','SRcum','targetcum','PYcum'])
 
 
 window = 7
