@@ -28,7 +28,8 @@ df["SRma"] = df["result"].rolling(window).mean()
 df["PYma"] = df["PY"].rolling(window).mean()
 
 
-st.write(df[['target,'PY','result']])
+st.write(df[['target','PY','result']])
+
 
 
 
