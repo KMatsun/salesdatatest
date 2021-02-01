@@ -17,7 +17,7 @@ df["SRcum"]=df["result"].cumsum()
 df["targetcum"]=df["target"].cumsum()
 df["PYcum"]=df["PY"].cumsum()
 
-st.line_chart(df)
+st.line_chart(df['SRcum','targetcum','PYcum'])
 
 
 
@@ -26,8 +26,7 @@ df["SRma"] = df["result"].rolling(window).mean()
 df["PYma"] = df["PY"].rolling(window).mean()
 
 
-st.write(df)
-st.line_chart(df)
+st.write(df[0,1,2,3])
 
 import matplotlib.pyplot as plt
 fig, ax1 = plt.subplots(1,1,figsize=(10,8))
