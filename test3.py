@@ -10,7 +10,7 @@ st.write("Sales")
 url="https://drive.google.com/uc?id=11CUOWKfXvZDDGmgbkg4Ht5Kwxgk-mVh3"
 
 df=pd.read_csv(url,index_col=0,parse_dates=[0])
-df=pd.to_datetime(df['date'],format='%Y%m%d')
+df=pd.to_datetime(df[0],format='%Y%m%d')
 
 df["SRcum"]=df["result"].cumsum()
 df["targetcum"]=df["target"].cumsum()
