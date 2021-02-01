@@ -17,7 +17,7 @@ df["SRcum"]=df["result"].cumsum()
 df["targetcum"]=df["target"].cumsum()
 df["PYcum"]=df["PY"].cumsum()
 
-st.line_chart(df.loc.[:,['date','SRcum','targetcum','PYcum']])
+st.line_chart(df.loc[:,['date','SRcum','targetcum','PYcum']])
 
 
 
