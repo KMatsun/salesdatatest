@@ -28,7 +28,8 @@ df["SRma"] = df["result"].rolling(window).mean()
 df["PYma"] = df["PY"].rolling(window).mean()
 
 
-st.write(df[0,1,2,3])
+st.write(df['SRcum','targetcum','PYcum'])
+
 
 import matplotlib.pyplot as plt
 fig, ax1 = plt.subplots(1,1,figsize=(10,8))
