@@ -14,7 +14,11 @@ df=pd.read_csv(url,index_col=0,parse_dates=[0])
 
 
 df["SRcum"]=df["result"].cumsum()
-st.line_chart(df["SRcum"])
+df["targetcum"]=df["target"].cumsum()
+df["PYcum"]=df["PY"].cumsum()
+
+st.line_chart(df)
+
 
 
 window = 7
