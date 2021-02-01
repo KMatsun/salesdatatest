@@ -28,7 +28,9 @@ df["SRma"] = df["result"].rolling(window).mean()
 df["PYma"] = df["PY"].rolling(window).mean()
 
 
-st.write(df['SRcum','targetcum','PYcum'])
+st.write(df[['target,'PY','result']])
+
+
 
 
 import matplotlib.pyplot as plt
