@@ -10,20 +10,12 @@ st.write("Sales")
 url="https://drive.google.com/uc?id=11CUOWKfXvZDDGmgbkg4Ht5Kwxgk-mVh3"
 
 df=pd.read_csv(url)
-df=df.set_index(['date'])
-
-df['date']=pd.to_datetime(df['date'],format='%Y%m%d')
-
-
 
 df["SRcum"]=df["result"].cumsum()
 df["targetcum"]=df["target"].cumsum()
 df["PYcum"]=df["PY"].cumsum()
 
 st.line_chart(df[['SRcum','targetcum','PYcum']])
-
-
-
 
 window = 7
 df["SRma"] = df["result"].rolling(window).mean()
