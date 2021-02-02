@@ -10,6 +10,9 @@ st.write("Sales")
 url="https://drive.google.com/uc?id=11CUOWKfXvZDDGmgbkg4Ht5Kwxgk-mVh3"
 
 df=pd.read_csv(url)
+df['date']=pd.to_datetime(df['date'])
+df=df.set_index('date')
+
 
 df["SRcum"]=df["result"].cumsum()
 df["targetcum"]=df["target"].cumsum()
@@ -23,10 +26,6 @@ df["PYma"] = df["PY"].rolling(window).mean()
 
 
 st.write(df[['target','PY','result']])
-
-
-
-
 
 import matplotlib.pyplot as plt
 fig, ax1 = plt.subplots(1,1,figsize=(10,8))
