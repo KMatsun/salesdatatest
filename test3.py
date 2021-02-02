@@ -10,7 +10,7 @@ st.write("Sales")
 url="https://drive.google.com/uc?id=11CUOWKfXvZDDGmgbkg4Ht5Kwxgk-mVh3"
 
 df=pd.read_csv(url,encoding="utf-8",header=0)
-df['date']=pd.to_datetime(df['date'],format='%Y%m%d')
+df['date']=pd.to_datetime(df['date'])
 df=df.set_index('date')
 
 
