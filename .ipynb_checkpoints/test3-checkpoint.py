@@ -7,7 +7,7 @@ st.title("Sample")
 st.write("Sales")
 
 
-url="https://drive.google.com/uc?id=1DnA31p_QW142KNxH0GzNtCnWm194sHLN"
+url="https://drive.google.com/uc?id=11CUOWKfXvZDDGmgbkg4Ht5Kwxgk-mVh3"
 
 df=pd.read_csv(url,encoding="utf-8",header=0)
 df['date']=pd.to_datetime(df['date'])
