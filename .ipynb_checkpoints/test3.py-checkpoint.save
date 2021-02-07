@@ -9,6 +9,7 @@ st.write("Sales")
 
 url="https://drive.google.com/uc?id=1DnA31p_QW142KNxH0GzNtCnWm194sHLN"
 
+
 df=pd.read_csv(url,encoding="utf-8",header=0)
 df['date']=pd.to_datetime(df['date'])
 df=df.set_index('date')
@@ -25,7 +26,7 @@ df["SRma"] = df["result"].rolling(window).mean()
 df["PYma"] = df["PY"].rolling(window).mean()
 
 
-print(df[['target','PY','result']])
+st.write(df[['target','PY','result']])
 
 import matplotlib.pyplot as plt
 fig, ax1 = plt.subplots(1,1,figsize=(10,8))
